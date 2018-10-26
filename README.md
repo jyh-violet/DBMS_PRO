@@ -3,4 +3,4 @@ a simple prototype of  database system
 
 This is just a toy now. And main codes of this project are from my partner baishilei and I.
 
-The entrance is in src/test/init.c 
+The entrance is in src/test/test_lex.c
