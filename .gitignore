@@ -1,0 +1,17 @@
+Debug/*
+src/data/*
+.cproject
+.project
+system
+0*
+1*
+2*
+*.fsm
+test_*
+0
+grammer.tab.c
+grammer.tab.h
+lex.yy.c
+system
+test_lex
+test_storage

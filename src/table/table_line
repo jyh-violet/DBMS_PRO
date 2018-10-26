@@ -1,0 +1,17 @@
+tableName : lineitem
+	L_ORDERKEY, integer
+	L_PARTKEY, integer
+	L_SUPPKEY, integer
+	L_LINENUMBER , integer
+	L_QUANTITY, float
+	L_EXTENDEDPRICE, float
+	L_DISCOUNT, float
+	L_TAX , float
+	L_RETURNFLAG,char,1
+	L_LINESTATUS,char,1
+	L_SHIPDATE, varchar, 10
+	L_COMMITDATE, varchar, 10
+	L_RECEIPTDATE, varchar, 10
+	L_SHIPINSTRUCT,char,25
+	L_SHIPMODE,char,10
+	L_COMMENT,varchar,44

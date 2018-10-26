@@ -1,0 +1,7 @@
+tableName : sys_index
+    indexOid, integer
+    tblOid, integer
+    tblName, char, 100
+    indexName, char, 100
+    indexattr, char, 100
+    indextype, integer

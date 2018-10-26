@@ -1,0 +1,7 @@
+tableName : sys_attr
+    tblOid, integer
+    tblName, char, 100
+    attrName, char, 100
+    attrType, integer
+    attrLength, integer
+    attrno, integer

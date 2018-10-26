@@ -1,0 +1,9 @@
+tableName : CUSTOMER
+    C_CUSTKEY, integer
+	C_NAME, varchar, 25
+	C_ADDRESS, varchar, 40
+	C_NATIONKEY, integer
+	C_PHONE, char, 15
+	C_ACCTBAL, float
+	C_MKTSEGMENT, char, 10
+	C_COMMENT,  varchar, 117

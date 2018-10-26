@@ -1,0 +1,135 @@
+/*
+ * node.h
+ *
+ *  Created on: Nov 24, 2017
+ *      Author: bsl
+ */
+
+#ifndef NODE_H_
+#define NODE_H_
+
+typedef enum NodeTag{
+    NODE_NONE,
+    NODE_CHAR,
+    NODE_SELECT_TABLE,
+    NODE_INSERT_TABLE,
+    NODE_DELETE_TABLE,
+    NODE_CREATE_INDEX,
+    NODE_CREATE_TABLE,
+    NODE_DROP_INDEX,
+    NODE_DROP_TABLE,
+    NODE_UPDATE_TABLE,
+    NODE_SET_DEFINITION,
+    NODE_EXISTS,
+    NODE_CONSTRAINT,
+    NODE_ATTR_TYPE,
+    NODE_ATTR_DEFINITION,
+    NODE_CHILD_CONSTRAINT,
+    NODE_CHILD_CONSTRAINT_DATA,
+    NODE_ATTR_LIST,
+    NODE_ATTR_ITEM,
+    NODE_VALUE_ITEM,
+    NODE_LIMIT_ITEM,
+    NODE_BASE_EXPR,
+    NODE_SIMPLE_EXPR,
+    NODE_WHERE_DEFINITION,
+    NODE_ORDER_ITEM,
+}NodeTag;
+
+
+
+typedef struct Nodes{
+	NodeTag tag;
+}Node;
+
+// condition constraint
+typedef enum Condition{
+    KEY_NONE,
+    KEY_PRIMARY,
+    KEY_FOREIGN,
+    
+    NULL_NONE,
+    NULL_TRUE,
+    NULL_FALSE,
+    
+    UNIQUE_FALSE,
+    UNIQUE_TRUE,
+    
+    AUTO_FALSE,
+    AUTO_TRUE,
+    
+    DEFAULT_NONE,
+    DEFAULT_NULL,
+    DEFAULT_TRUE,
+    
+    CONSTRAINT_NONE,
+    CONSTRAINT_KEY,
+    CONSTRAINT_NULL,
+    CONSTRAINT_UNIQUE,
+    CONSTRAINT_DEFAULT,
+    CONSTRAINT_AUTOINCREMENT,
+    
+    DISTINCT_FALSE,
+    DISTINCT_TRUE,
+
+    INDEX_NONE,
+    INDEX_HASH,
+    INDEX_BTREE,
+ 
+    ORDER_NONE,
+    ORDER_ASC,
+    ORDER_DESC,
+
+    LIMIT_NONE,
+    LIMIT_DOUBLE,
+    LIMIT_SINGLE
+}Condition;
+
+// expr type
+typedef enum ExprType{
+    EXPR_NONE,
+    EXPR_NUMBER,
+    EXPR_REAL,
+    EXPR_STRING,
+    EXPR_COLUME,
+    EXPR_BASE,
+    EXPR_SIMPLE
+}ExprType;
+
+typedef enum OpType{
+    OP_NONE,
+
+    OP_ADD,
+    OP_SELF_ADD,
+    OP_SUB,
+    OP_SELF_SUB,
+    OP_MUL,
+    OP_SELF_MUL,
+    OP_DIV,
+    OP_SELF_DIV,
+    OP_MOD,
+    OP_SELF_MOD,
+
+    OP_LESS,
+    OP_EQUAL,
+    OP_NOT_EQUAL,
+    OP_GREATER,
+    OP_LESS_EQUAL,
+    OP_GREATER_EQUAL,
+
+    OP_AND,
+    OP_OR,
+    OP_BETWEEN,
+    OP_NOT_BETWEEN,
+
+    OP_LIKE,
+    OP_NOT_LIKE,
+    OP_NULL,
+    OP_NOT_NULL,
+    OP_TRUE,
+    OP_NOT_TRUE,
+    OP_FALSE,
+    OP_NOT_FALSE
+}OpType;
+
+#endif /* NODE_H_ */

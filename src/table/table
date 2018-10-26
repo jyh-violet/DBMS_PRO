@@ -1,0 +1,8 @@
+tableName : supplier
+    s_suppkey, integer
+    s_name, char, 25
+    s_address, varchar, 40
+    s_nationkey, integer
+    s_phone, char, 15
+    s_acctbal, float
+    s_comment, varchar, 101
